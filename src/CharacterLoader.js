@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Container, Button, Typography, Grid, Card, CardContent, TextField } from '@mui/material';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
-// Definir la función fuera del componente
 const loadCharacters = (setCharacters, setLoading) => {
   setLoading(true);
 
@@ -43,7 +42,6 @@ function CharacterLoader() {
     const term = event.target.value;
     setSearchTerm(term);
 
-    // Realizar la búsqueda en tiempo real
     searchCharacters(term);
   };
 
@@ -91,7 +89,7 @@ function CharacterLoader() {
         />
         <SearchOutlinedIcon onClick={() => searchCharacters(searchTerm)} style={styles.searchIcon} />
       </div>
-      {/* Referenciar la función correctamente en el evento onClick */}
+      { }
       <Button variant="contained" onClick={() => loadCharacters(setCharacters, setLoading)} disabled={loading} sx={styles.button}>
         {loading ? 'Cargando Personajes...' : 'Cargar Personajes'}
       </Button>
